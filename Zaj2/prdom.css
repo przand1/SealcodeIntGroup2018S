@@ -1,0 +1,16 @@
+.preloader {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  margin: auto;
+  animation: identifier 1s linear infinite;
+}
+
+@keyframes identifier {
+  from {}
+  to {transform: rotate(360deg);}
+}
+
+.zapychacz {
+  padding: 10%;
+}
