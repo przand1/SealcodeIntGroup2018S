@@ -1,0 +1,44 @@
+#main {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	bottom: 25%;
+	left: 25%;
+	border-radius: 10%;
+	background-color: #aaf;
+	padding: 2.5%;
+
+}
+
+#addNew {
+	background-color: #bbe;
+	border-radius: 5px;
+	border: 5px inherit;
+	width: 120px;
+	height: 40px;
+}
+
+#addNew:hover {
+	background-color: #ee4;
+	transition: 500ms ease-out;
+}
+
+.box {
+	height: 80%;
+	width: 100%;
+	padding: 5px;
+	overflow-y: auto;
+}
+
+.box a {
+	height: 60px;
+	width: auto;
+	background-color: #bbe;
+	border-radius: 5px;
+	display: block;
+}
+
+.box a:hover {
+	background-color: #ee4;
+	transition: 500ms ease-out;
+}
