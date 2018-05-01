@@ -7,22 +7,16 @@ var kotki = [
   { imie: "Isia", poziom_slodkosci: 9, obraz: { url: "http://wlpapers.com/images/closeup-sweet-cat-photo-1.jpg" , rozmiar: "M"  }}
 ]
 
-function wypiszKota(n) {
-  for (var i = 0; i < n; i++) {
-    console.log(kotki[i].imie + " - " + kotki[i].poziom_slodkosci + "\n" + kotki[i].obraz.url);
-  }
-}
-
-function wypiszKota2() {
-  var tresc = "";
-  var n = document.getElementById("wejscie").value;
-  if (n>6||n<1) {
-    tresc="Mamy tylko 6."
+function wypisz(n) {
+  var wynik = ""
+  var temp
+  if (n>kotki.length) {
+    wynik = "Nie ma tyle kotów.\n"
   } else {
     for (var i = 0; i < n; i++) {
-      tresc += kotki[i].imie + "<br>" + kotki[i].poziom_slodkosci + "<br>" + kotki[i].obraz.url + "<br>";
+    temp = kotki[i]
+    wynik += (temp.imie + " - " + temp.poziom_slodkosci + "\n" + temp.obraz.url + "\n\n")
     }
   }
-
-  document.getElementById("koty").innerHTML = tresc;
+  console.log(wynik)
 }
