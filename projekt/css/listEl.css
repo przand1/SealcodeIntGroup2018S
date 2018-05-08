@@ -1,0 +1,23 @@
+.listEl {
+	height: 60px;
+	width: auto;
+	background-color: #bbe;
+	border-radius: 5px;
+	display: block;
+	text-align: center;
+}
+.listEl:hover {
+	background-color: #ee4;
+	transition: 500ms ease-out;
+}
+.listEl .delete {
+  float: right;
+  position: relative;
+  top: 25%;
+}
+
+.listEl .check {
+  float: left;
+  position: relative;
+  top: 25%;
+}

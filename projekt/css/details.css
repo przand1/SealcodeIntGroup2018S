@@ -1,0 +1,23 @@
+.details {
+	width: 30%;
+	height: 100px;
+	background-color: #ddd;
+	display: none;
+	z-index: 1;
+	position: absolute;
+	left: 20%;
+	top: 50%;
+}
+
+.details .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.details .close:hover,
+.details .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
