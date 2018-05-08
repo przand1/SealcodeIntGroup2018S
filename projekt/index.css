@@ -24,21 +24,46 @@
 }
 
 .box {
-	height: 80%;
+	height: 78%;
 	width: 100%;
 	padding: 5px;
+	margin-top: 2%;
 	overflow-y: auto;
 }
 
-.box a {
+.listEl {
 	height: 60px;
 	width: auto;
 	background-color: #bbe;
 	border-radius: 5px;
 	display: block;
+	text-align: center;
 }
-
-.box a:hover {
+.listEl:hover {
 	background-color: #ee4;
 	transition: 500ms ease-out;
+}
+
+.details {
+	width: 30%;
+	height: 100px;
+	background-color: #ddd;
+	display: none;
+	z-index: 1;
+	position: absolute;
+	left: 20%;
+	top: 50%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -3,23 +3,24 @@
 <head>
 	<link rel="stylesheet" href="index.css">
 	<meta charset="utf-8">
+	<script src="showDetails.js" type="text/javascript"></script>
+	<script src="hideDetails.js" type="text/javascript"></script>
+	<script src="clock.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="clock()">
+	<div id="currentDate"></div>
 	<div id="main">
 		<input id="addNew" type="button" value="Dodaj nową">
 		<div class="box">
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
-			<a href="#">...</a>
+			<div class="listEl" onclick="showDetails()">Sprawa 1</div>
+			<div class="listEl" onclick="showDetails()">Sprawa 2</div>
+			<div class="listEl" onclick="showDetails()">Sprawa 3</div>
+			<div class="listEl" onclick="showDetails()">Sprawa 4</div>
+			<div class="listEl" onclick="showDetails()">Sprawa 5</div>
+			<div class="listEl" onclick="showDetails()">Sprawa 6</div>
+			<div class="listEl" onclick="showDetails()">Sprawa 7</div>
 		</div>
 	</div>
+	<div class="details" id="myPopup">...<span class="close" onclick="hideDetails()">&times;</span></div>
 </body>
 </html>
