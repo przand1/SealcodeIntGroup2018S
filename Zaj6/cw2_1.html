@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style media="screen">
+    div {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <script>
+
+    var a;
+
+    function getRandomColor() {
+      var r = Math.floor(256*Math.random());
+      var g = Math.floor(256*Math.random());
+      var b = Math.floor(256*Math.random());
+
+      return "#"+r.toString(16)+g.toString(16)+b.toString(16);
+    }
+
+    function doIt() {
+      document.getElementsByTagName("div")[0].style.backgroundColor=getRandomColor();
+    }
+
+    function doIt2() {
+      var v=document.getElementById("in").value;
+      a=window.setInterval(doIt,v);
+    }
+
+  </script>
+</head>
+<body>
+  <div></div>
+  <input type="text" id="in" value="1000">
+  <input type="button" onclick="doIt2()" value="start">
+  <input type="button" onclick="window.clearInterval(a)" value="stop">
+</body>
+</html>
