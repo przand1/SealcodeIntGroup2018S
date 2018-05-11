@@ -34,24 +34,6 @@
     <div class="redRect"></div>
     <div class="redRect"></div>
     <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
-    <div class="redRect"></div>
   <script>
     function getRandomColor() {
       var r = Math.floor(256*Math.random());
@@ -65,7 +47,7 @@
     for( var i = 0; i < d.length; i++ ){
       (function(i){
           d[i].addEventListener('mouseenter', function(event) {
-            d[i].style.backgroundColor=getRandomColor();
+            this.style.backgroundColor=getRandomColor();
           }, false);
         })(i);
       }
