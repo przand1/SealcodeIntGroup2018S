@@ -17,8 +17,8 @@
 }
 
 .listEl .check {
-  float: left;
+	float: left;
 	position: relative;
-	top: 30	%;
+	top: 30%;
 	width: 60px;
 }

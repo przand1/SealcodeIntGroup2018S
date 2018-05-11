@@ -9,21 +9,7 @@ function addTaskToBox(text) {
   var im=document.createElement("input");
   //im.src="img/checkOff.png";
   im.type="checkbox";
-  im.className="check"
-  im.addEventListener("click",function(){
-    /*
-    if(this.getAttribute("src")=="img/checkOff.png") {
-        this.src="img/checkOn.png";
-    } else {
-      this.src="img/checkOff.png";
-    }
-    */
-    if (this.getAttribute("checked")==true) {
-      this.checked=false;
-    } else {
-      his.checked=true;
-    }
-  });
+  im.className="check";
 
 
   var del=document.createElement("input");

@@ -34,3 +34,9 @@
 	margin-top: 2%;
 	overflow-y: auto;
 }
+
+#currentDate {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
