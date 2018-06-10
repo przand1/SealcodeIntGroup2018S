@@ -35,9 +35,11 @@ function postData() {
   .then(function(response) {
     console.log(response);
     document.getElementById('id').value=response.data.data._id
+    alert("Dodano nowy kwas.")
   })
   .catch(function(error) {
     console.log(error);
+    alert("Błąd.")
   })
 
 }
