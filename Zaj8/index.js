@@ -56,3 +56,30 @@ function deleteData() {
     })
 
 }
+
+function getData1() {
+  axios
+  .get("http://vps487563.ovh.net:55555/api/v1/to_do/przand1/tasks")
+  .then(function(response) {
+    storage=response.data
+  })
+  .catch(function(error) {
+    console.log(error);
+  })
+}
+function postData1() {
+  axios
+  .post("http://vps487563.ovh.net:55555/api/v1/to_do/tasks",{
+          user: "przand1",
+          title: "sprawa 1",
+          done: "true",
+          })
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.log(error);
+    alert(error)
+  })
+
+}
