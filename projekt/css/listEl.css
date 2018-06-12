@@ -4,7 +4,6 @@
 	background-color: #bbe;
 	border-radius: 5px;
 	display: block;
-	text-align: center;
 }
 .listEl:hover {
 	background-color: #ee4;
@@ -12,13 +11,16 @@
 }
 .listEl .delete {
   float: right;
-  position: relative;
-  top: 25%;
 }
 
 .listEl .check {
 	float: left;
+	width: 60px;
+}
+
+.listEl .text {
 	position: relative;
 	top: 30%;
-	width: 60px;
+	text-align:center;
+	padding-right: 5%;
 }

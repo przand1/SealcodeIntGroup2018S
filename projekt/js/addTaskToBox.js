@@ -1,16 +1,34 @@
-function addTaskToBox(text,_id) {//TODO argument:checked
+function addTaskToBox(text,_id,done) {//TODO argument:checked
 
   var box=document.getElementById('box');
 
   var el=document.createElement("div");
   el.className="listEl";
-  el.textContent=text;
   el.id=_id
+
+  var textbox=document.createElement("div");
+  textbox.textContent=text
+  textbox.className="text"
 
   var im=document.createElement("input");
   //im.src="img/checkOff.png";
   im.type="checkbox";
   im.className="check";
+  im.checked=done
+  im.addEventListener("click",function(){
+    var checked = this.checked;
+    var url = "http://vps487563.ovh.net:55555/api/v1/to_do/tasks/"+this.parentNode.parentNode.id
+    axios
+      .put(url,{
+        done: checked
+      })
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    })
+  })
 
 
   var del=document.createElement("input");
@@ -18,13 +36,13 @@ function addTaskToBox(text,_id) {//TODO argument:checked
   del.value="X";
   del.className="delete";
   del.addEventListener("click",function(){
-    var v="http://vps487563.ovh.net:55555/api/v1/to_do/tasks/"+this.parentNode.id
-    console.log(v);
+    var url="http://vps487563.ovh.net:55555/api/v1/to_do/tasks/"+this.parentNode.parentNode.id
+    var node = this
     axios
-    .delete(v)
+    .delete(url)
     .then(function(response) {
       console.log(response);
-      this.parentNode.parentNode.removeChild(this.parentNode);
+      node.parentNode.parentNode.parentNode.removeChild(node.parentNode.parentNode)
     })
     .catch(function(error) {
       console.log(error);
@@ -34,20 +52,9 @@ function addTaskToBox(text,_id) {//TODO argument:checked
   })
 
 
-  el.appendChild(im);
-  el.appendChild(del);
+  textbox.appendChild(im);
+  textbox.appendChild(del);
+  el.appendChild(textbox)
 
   box.appendChild(el);
-}
-function deleteThis(d) {
-
-  var v = "http://vps487563.ovh.net:55555/api/v1/to_do/tasks/"+d.toString()
-  axios
-    .delete(v)
-    .then(function(response) {
-      console.log(response);
-    })
-    .catch(function(error) {
-      console.log(error);
-    })
 }
